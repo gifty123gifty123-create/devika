@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+/* ============ VIDEO BACKGROUND ============ */
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.9);
+}
+
+/* ============ HEADER - GLASSMORPHISM ============ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+
+    /* GLASSMORPHISM EFFECT */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(183, 110, 121, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    /* CENTER NAV */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============ NAVBAR - CENTERED ============ */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    /* DARKER ROSE GOLD GRADIENT */
+    background: linear-gradient(to right, #7a3f48, #b76e79, #9a6a54, #7a3f48);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* UNDERLINE ANIMATION */
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f);
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    filter: drop-shadow(0 0 10px rgba(247, 202, 201, 0.6));
+}
+
+/* ============ LOGIN WRAPPER - GLASSMORPHISM ============ */
+.wrapper {
+    width: 420px;
+    padding: 45px 40px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin-top: 40px;
+
+    /* GLASSMORPHISM EFFECT */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(183, 110, 121, 0.4);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ TITLE ============ */
+.wrapper h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    
+    background: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f, #b76e79);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============ INPUT BOX ============ */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    font-size: 16px;
+    padding: 20px 50px 20px 25px;
+    outline: none;
+    
+    /* GLASSMORPHISM INPUT */
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(183, 110, 121, 0.4);
+    color: #f7cac9;
+    
+    transition: all 0.4s ease;
+}
+
+.input-box input:focus {
+    border-color: rgba(247, 202, 201, 0.8);
+    box-shadow: 0 0 20px rgba(183, 110, 121, 0.4);
+}
+
+.input-box input::placeholder {
+    color: rgba(247, 202, 201, 0.6);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    
+    background: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============ REMEMBER & FORGOT ============ */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin: 20px 0 30px;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    
+    background: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.remember-forgot label input {
+    accent-color: #b76e79;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    font-style: italic;
+    
+    background: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    transition: 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    filter: drop-shadow(0 0 8px rgba(247, 202, 201, 0.6));
+}
+
+/* ============ LOGIN BUTTON ============ */
+.btn {
+    width: 100%;
+    height: 55px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    
+    /* GLASSMORPHISM BUTTON */
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(183, 110, 121, 0.5);
+    color: #f7cac9;
+    
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: visible;
+}
+
+.btn:hover {
+    background: rgba(183, 110, 121, 0.3);
+    border-color: rgba(247, 202, 201, 0.9);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(183, 110, 121, 0.5);
+    transform: scale(1.02);
+}
+
+/* ============ MAGICAL HOVER TEXT ============ */
+.btn:hover::after {
+    content: "✧ Enter the Divine World ✧";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2px;
+    
+    color: #fff;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #b76e79, 
+        0 0 20px #b76e79, 
+        0 0 40px #f7cac9;
+        
+    white-space: nowrap;
+    animation: divineGlow 1.2s infinite ease-in-out;
+}
+
+@keyframes divineGlow {
+    0% { opacity: 0; transform: translate(-50%, 10px); }
+    50% { opacity: 1; transform: translate(-50%, 0px); }
+    100% { opacity: 0; transform: translate(-50%, -5px); }
+}
+
+/* ============ REGISTER LINK ============ */
+.register-link {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.register-link p {
+    background: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.register-link a {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    
+    background: linear-gradient(to right, #dfbe9f, #f7cac9, #b76e79);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    transition: 0.3s ease;
+}
+
+.register-link a:hover {
+    filter: drop-shadow(0 0 8px rgba(247, 202, 201, 0.6));
+}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .navbar {
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navbar a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 500px) {
+    .wrapper {
+        width: 90%;
+        padding: 40px 25px;
+        margin-top: 80px;
+    }
+    
+    .wrapper h1 {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+    
+    .remember-forgot {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navbar {
+        gap: 20px;
+    }
+    
+    .navbar a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+}
