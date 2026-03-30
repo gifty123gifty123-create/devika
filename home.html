@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elysea Perfumes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --rose-gold: #b76e79;
+    --soft-pink: #f7cac9;
+    --golden-beige: #dfbe9f;
+    --rose-gold-gradient: linear-gradient(to right, #b76e79, #f7cac9, #dfbe9f, #b76e79);
+}
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cormorant Garamond', serif;
+}
+
+body{
+    background:#000;
+}
+
+/* Background */
+.back-video{
+    position:fixed;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+    filter:brightness(0.6);
+}
+
+/* Section */
+section{
+    padding:70px 7%;
+    display:flex;
+    justify-content:center;
+}
+
+/* Glass Box */
+.glass-box{
+    width:100%;
+    max-width:1200px;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(183,110,121,0.4);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+    text-align:center;
+}
+
+/* Heading */
+.heading{
+    font-family:'Cinzel', serif;
+    font-size:48px;
+    margin-bottom:30px;
+    background:var(--rose-gold-gradient);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Home */
+.home{
+    min-height:100vh;
+    align-items:center;
+}
+
+.home h3{
+    font-family:'Cinzel', serif;
+    font-size:70px;
+    background:var(--rose-gold-gradient);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.home span{
+    color:var(--soft-pink);
+    font-size:28px;
+}
+
+.home p{
+    margin:20px 0;
+    font-size:22px;
+    color:rgba(247,202,201,0.9);
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 40px;
+    border-radius:40px;
+    border:2px solid var(--rose-gold);
+    color:var(--rose-gold);
+    font-family:'Cinzel', serif;
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:var(--rose-gold);
+    color:white;
+    transform:scale(1.05);
+}
+
+/* PRODUCT SECTION FULLSCREEN */
+.box-container{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+
+/* Fullscreen card */
+.box{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(183,110,121,0.4);
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+}
+
+/* Fullscreen image */
+.box img{
+    width:100%;
+    height:70vh;
+    object-fit:contain;
+}
+
+/* Product info */
+.info{
+    margin-top:20px;
+}
+
+.info h3{
+    font-family:'Cinzel', serif;
+    font-size:32px;
+    background:var(--rose-gold-gradient);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.price{
+    font-size:24px;
+    color:var(--soft-pink);
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="hie.jpg" class="back-video">
+
+<!-- HOME -->
+<section class="home">
+<div class="glass-box">
+<h3>Elysea</h3>
+<span>the essence of elegance</span>
+<p>The Story of Elysea
+Elysea was born from the belief that every woman carries a goddess within her — powerful, mysterious, nurturing, and radiant. Inspired by ancient mythology, Elysea blends timeless divine energy with modern elegance through scent. Each fragrance tells a story: Persephone’s rebirth from darkness, Aphrodite’s irresistible allure, Athena’s quiet intelligence, Artemis’s untamed freedom, Hecate’s sacred magic, and Hestia’s comforting warmth of home. Crafted with intention and emotion, Elysea transforms perfume into a ritual — a moment where identity, memory, and confidence awaken. More than fragrance, Elysea is a journey into self-discovery, where mythology lives again through you.</p>
+<a href="#products" class="btn">Explore Collection</a>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+<div class="glass-box">
+
+<h1 class="heading">Signature Scents</h1>
+
+<div class="box-container">
+
+<div class="box">
+<img src="perfume 1.jpeg">
+<div class="info">
+<h3>Siren Elixirs</h3>
+<div class="price">$120</div>
+</div>
+</div>
+
+<div class="box">
+<img src="perfume 2.jpeg">
+<div class="info">
+<h3>White Moon Mist</h3>
+<div class="price">$150</div>
+</div>
+</div>
+
+<div class="box">
+<img src="perfume 3.jpeg">
+<div class="info">
+<h3>Wisdom Bloom</h3>
+<div class="price">$135</div>
+</div>
+</div>
+
+<div class="box">
+<img src="perfume 4.jpeg">
+<div class="info">
+<h3>Pearl Of Love</h3>
+<div class="price">$110</div>
+</div>
+</div>
+
+<div class="box">
+<img src="perfume 5.jpeg">
+<div class="info">
+<h3>Inner Haven</h3>
+<div class="price">$125</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</body>
+</html>
+ 
